@@ -1,23 +1,24 @@
 package exercicios_array;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Ex4 {
     public static void main(String[] args) {
-        Random random = new Random();
-        int[][] matriz = new int[4][4];
+        Scanner sc = new Scanner(System.in);
 
-        for (int i =0;i<matriz.length;i++){
-            for(int j =0;j<matriz[0].length;j++){
-                matriz[i][j] = random.nextInt(9);
-            }
-        }
+        int n = 9;
 
-        for(int[] linha : matriz){
-            for(int coluna : linha){
-                System.out.print(coluna+" ");
+        for(int i = 0 ; i < n ; i++) {
+
+            int x = i*8;
+            long valor = 1,temp =0;
+            for(int j =0;j<x;j++){
+                valor = valor*2;
+                temp +=valor/12000;
             }
-            System.out.println();
+            System.out.println(temp + " kg");
         }
+        sc.close();
     }
 }
