@@ -1,4 +1,4 @@
-package pilha;
+package stack;
 
 public class Node {
     private int data;

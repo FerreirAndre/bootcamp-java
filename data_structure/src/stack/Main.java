@@ -1,4 +1,4 @@
-package pilha;
+package stack;
 
 import java.util.Scanner;
 
@@ -20,7 +20,7 @@ public class Main {
                 case 'd':
                     Node popped = stack.pop();
                     if (popped != null) {
-                        System.out.println("value removed: " + stack.pop());
+                        System.out.println("value removed: " + popped.getDado());
                     } else {
                         System.out.println("empty stack, can't remove.");
                     }
